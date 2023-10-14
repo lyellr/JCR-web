@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -6,17 +9,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
  
     // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      'sans': ['Palanquin', 'sans-serif'],
-      'serif': ['Unna', 'serif'],
-      'nav': ['Jaldi', 'sans-serif'],
-      'display': ['Palanquin Dark', 'sans-serif'],
-
+    extend: {
+      fontFamily: {
+        serif: ['var(--font-serif)', fontFamily.serif],
+        sans: ['var(--font-sans)', fontFamily.sans],
+        nav: ['var(--font-nav)', fontFamily.sans],
+        display: ['var(--font-display)', fontFamily.sans],
+      },
     },
-    extend: {},
   },
   plugins: [],
 }

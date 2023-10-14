@@ -1,11 +1,14 @@
 import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
+  
   return (
-    <h1 className="font-sans text-3xl font-bold underline">
-      MONTANA PRINCIPLES
-    </h1>
+    <div>
+      <h1 className="font-display text-3xl">
+        Let's go!
+      </h1>
+    </div>
   )
 }
